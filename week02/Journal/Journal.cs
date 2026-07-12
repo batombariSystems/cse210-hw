@@ -9,6 +9,8 @@ public class Journal
 
     public void DisplayAll()
     {
+        Console.WriteLine($"\nTotal Entries: {_entries.Count}\n");
+
         foreach (Entry entry in _entries)
         {
             entry.Display();
@@ -21,7 +23,7 @@ public class Journal
         {
             foreach (Entry entry in _entries)
             {
-                output.WriteLine($"{entry._date}|{entry._promptText}|{entry._entryText}");
+                output.WriteLine($"{entry._date}|{entry._promptText}|{entry._entryText}|{entry._mood}");
             }
         }
     }
@@ -40,6 +42,7 @@ public class Journal
             entry._date = parts[0];
             entry._promptText = parts[1];
             entry._entryText = parts[2];
+            entry._mood = parts[3];
 
             _entries.Add(entry);
         }
