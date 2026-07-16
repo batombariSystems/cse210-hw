@@ -3,7 +3,7 @@ using System;
 class Program
 {
     static void Main(string[] args)
-    {
+    
 
     {
         // Test first constructor
@@ -35,6 +35,5 @@ class Program
         Console.WriteLine(f5.GetFractionString());
         Console.WriteLine(f5.GetDecimalValue());
     }
-}
 
     }
